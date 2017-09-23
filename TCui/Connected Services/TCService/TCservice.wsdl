@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TCservice" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/TChost/TCservice/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/TChost/TCservice/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITCservice_CelsiumToFahrenheit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiumToFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_CelsiumToFahrenheit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiumToFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_CelsiumToKelvin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiumToKelvin" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_CelsiumToKelvin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiumToKelvinResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_FahrenheitToCelsium_InputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToCelsium" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_FahrenheitToCelsium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToCelsiumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_FahrenheitToKelvin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToKelvin" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_FahrenheitToKelvin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToKelvinResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_KelvinToCelsium_InputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToCelsium" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_KelvinToCelsium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToCelsiumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_KelvinToFahrenheit_InputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="ITCservice_KelvinToFahrenheit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITCservice">
+    <wsdl:operation name="CelsiumToFahrenheit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCservice/CelsiumToFahrenheit" message="tns:ITCservice_CelsiumToFahrenheit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCservice/CelsiumToFahrenheitResponse" message="tns:ITCservice_CelsiumToFahrenheit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CelsiumToKelvin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCservice/CelsiumToKelvin" message="tns:ITCservice_CelsiumToKelvin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCservice/CelsiumToKelvinResponse" message="tns:ITCservice_CelsiumToKelvin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToCelsium">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCservice/FahrenheitToCelsium" message="tns:ITCservice_FahrenheitToCelsium_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCservice/FahrenheitToCelsiumResponse" message="tns:ITCservice_FahrenheitToCelsium_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToKelvin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCservice/FahrenheitToKelvin" message="tns:ITCservice_FahrenheitToKelvin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCservice/FahrenheitToKelvinResponse" message="tns:ITCservice_FahrenheitToKelvin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToCelsium">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCservice/KelvinToCelsium" message="tns:ITCservice_KelvinToCelsium_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCservice/KelvinToCelsiumResponse" message="tns:ITCservice_KelvinToCelsium_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToFahrenheit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCservice/KelvinToFahrenheit" message="tns:ITCservice_KelvinToFahrenheit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCservice/KelvinToFahrenheitResponse" message="tns:ITCservice_KelvinToFahrenheit_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITCservice" type="tns:ITCservice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CelsiumToFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/ITCservice/CelsiumToFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CelsiumToKelvin">
+      <soap:operation soapAction="http://tempuri.org/ITCservice/CelsiumToKelvin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToCelsium">
+      <soap:operation soapAction="http://tempuri.org/ITCservice/FahrenheitToCelsium" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToKelvin">
+      <soap:operation soapAction="http://tempuri.org/ITCservice/FahrenheitToKelvin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToCelsium">
+      <soap:operation soapAction="http://tempuri.org/ITCservice/KelvinToCelsium" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/ITCservice/KelvinToFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TCservice">
+    <wsdl:port name="BasicHttpBinding_ITCservice" binding="tns:BasicHttpBinding_ITCservice">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/TChost/TCservice/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
